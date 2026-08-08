@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.memfleet/memfleet",
+  "description": "Shared, governed memory for fleets of AI agents: judged contributions, provenance, operator control",
+  "version": "1.0.1",
+  "websiteUrl": "https://memfleet.com",
+  "repository": {
+    "url": "https://github.com/oren198/memfleet",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://memfleet.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <agent key>. Mint a key for a Registered Agent from your Workspace's Console at memfleet.com; resolve it from an environment variable, never commit it.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
